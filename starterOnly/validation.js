@@ -9,12 +9,14 @@ const locations = document.querySelectorAll('#allLocations .checkbox-input');
 const checkbox1 = document.getElementsById('checkbox1');
 const input = document.getElementsByClassName('text-control');
 const form =document.getElementById('form');
-const regex = /^[a-zA-ZÀ-ÖØ-öø-ÿ]+$/;
+const regex =( /^[a-zA-ZÀ-ÖØ-öø-ÿ]+$/);
+
 
 // CONTROLE DES VALIDATIONS
 
 function checkFirstName() {
-    if(lastName.Value.trim().length < 2 || firstName.Value.trim()==='' || !firstName.Value.match(regex))
+    // const regex =( /^[a-zA-ZÀ-ÖØ-öø-ÿ]+$/);
+    if(firstName.Value.trim().length < 2 || firstName.Value.trim()==='' || !firstName.Value().match(regex));
     {
         firstName.parentElement.setAttribute('data-error-visible', 'true');
         firstName.style.border = '2px solid #e54858';
@@ -28,13 +30,15 @@ function checkFirstName() {
 }
 
 function checkLastName() {
-    if(lastName.Value.trim().length < 2 || lastName.Value.trim()==='' || !lastName.Value.match(regex))
+    if(lastName.Value.trim().length < 2 || lastName.Value.trim()==='' || lastName.Value().match(regex))
     {
         lastName.parentElement.setAttribute('data-error-visible', 'true');
+        lastName.style.border = '2px solid #e54858';
         return false;
 
     }
         lastName.parentElement.setAttribute('data-error-visible', 'false');
+        lastName.style.border = '2px solid #e54858';
         return true;
     
 }
