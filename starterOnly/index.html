@@ -22,7 +22,7 @@
       <a href="#">À propos</a>
       <a href="#">Contact</a>
       <a href="#">Évènements passés</a>
-      <a href="javascript:void(0);" class="icon"><i class="fa fa-bars"></i></a>
+      <a href="javascript:void(0);" class="icon" onclick="editNav()"><i class="fa fa-bars"></i></a>
     </div>
   </nav>
   </header>
@@ -56,7 +56,7 @@
         <span class="close"></span>
         <div class="modal-body">
           <!-- FORM -->
-          <form id="form" name="reserve" action="index.html" method="get" onsubmit="return validate();">
+           <form id="form" name="reserve" action="index.html" method="get" >
             <!-- FIRSTNAME -->
             <div class="formData" data-error="Vous devez entrez 2 caractères minimum" data-error-visible="false">
               <label for="first">Prénom</label><br>
@@ -83,37 +83,37 @@
               <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99" required>
             </div>
             <!-- LOCATIONS -->
-            <p class="text-label">A quel tournoi souhaitez-vous participer cette année ?</p>
+            <p class="text-label">Quelles villes ?</p>
             <div class="formData" id="allLocations" data-error="Vous devez sélectionner une ville" data-error-visible="false" >
-              <input class="checkbox-input" type="radio" id="location1" name="location" value="New York" />
+              <input class="checkbox-input" type="checkbox" id="location1" name="location" value="New York" />
               <label class="checkbox-label" for="location1">
                 <span class="checkbox-icon"></span>
                 New York</label>
-              <input class="checkbox-input" type="radio" id="location2" name="location" value="San Francisco" />
+              <input class="checkbox-input" type="checkbox" id="location2" name="location" value="San Francisco" />
               <label class="checkbox-label" for="location2">
                 <span class="checkbox-icon"></span>
                 San Francisco</label>
-              <input class="checkbox-input" type="radio" id="location3" name="location" value="Seattle" />
+              <input class="checkbox-input" type="checkbox" id="location3" name="location" value="Seattle" />
               <label class="checkbox-label" for="location3">
                 <span class="checkbox-icon"></span>
                 Seattle</label>
-              <input class="checkbox-input" type="radio" id="location4" name="location" value="Chicago" />
+              <input class="checkbox-input" type="checkbox" id="location4" name="location" value="Chicago" />
               <label class="checkbox-label" for="location4">
                 <span class="checkbox-icon"></span>
                 Chicago</label>
-              <input class="checkbox-input" type="radio" id="location5" name="location" value="Boston" />
+              <input class="checkbox-input" type="checkbox" id="location5" name="location" value="Boston" />
               <label class="checkbox-label" for="location5">
                 <span class="checkbox-icon"></span>
                 Boston</label>
-              <input class="checkbox-input" type="radio" id="location6" name="location" value="Portland" />
+              <input class="checkbox-input" type="checkbox" id="location6" name="location" value="Portland" />
               <label class="checkbox-label" for="location6">
                 <span class="checkbox-icon"></span>
                 Portland</label>
             </div>
             <!-- TERMS -->
             <div class="formData" data-error="Vous devez accepter les conditons d'utilisation" data-error-visible="false">
-              <input class="checkbox-input" type="checkbox" id="checkbox1" checked />
-              <label class="checkbox2-label" for="checkbox1" required>
+              <input class="checkbox-input" type="checkbox" id="checkbox1" required/>
+              <label class="checkbox2-label" for="checkbox1" >
                 <span class="checkbox-icon"></span>
                 J'ai lu et accepté les conditions d'utilisation.
               </label>
@@ -125,13 +125,13 @@
               </label>
               <br>
             </div>
-            <input class="btn-submit" type="submit" value="C'est parti" />
+            <input class="btn-submit " type="submit" value="C'est parti" />
           </form>
         </div>
       </div>
     </div>
     
-<!-- CONFIRM -->
+<!-- CONFIRMATION SUBMIT-->
     <div class="container-confirmation-submit">
       <div class="submitted-form">
       <span class="close-modal-submit"></span>
@@ -150,9 +150,8 @@
       Copyright 2014 - 2022, GameOn Inc.
     </p>
   </footer>
-  <script src="./modal.js"></script>
-  <script src="./confirmation.js"></script>
-  <script src="./validation.js"></script>
+  <script src="modal.js"></script>
+  <script src="confirmation.js"></script>
+  <script src="validation.js"></script>
 </body>
 
-</html>

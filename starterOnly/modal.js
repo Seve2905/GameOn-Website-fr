@@ -1,34 +1,41 @@
 // Déclaration des variables d'affichage du formulaire
 
 // DOM Elements
-const modalBg = document.querySelector(".bground");
+const modalbg = document.querySelector(".bground");
 const modalBtn = document.querySelectorAll(".modal-btn");
+const formData =  document.querySelectorAll(".formData");
+const closeBtn = document.getElementsByClassName("close");
 
-
-// Evénements qui déclenche l'Affichage formulaire
-
-// launch modal event
+// LAUNCH MODAL EVENTS
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 
 // fonction qui modifie l'affichage (le css)
-// launch modal form
+// LAUNCH MODAL FORM
 function launchModal() {
-  modalBg.style.display = "block";
+  modalbg.style.display = "block";
 }
-
-// Déclaration des variables de fermeture du formulaire
-// DOM ELEMENTS
-const modalBackground = document.querySelector(".bground");
-const closeBtn = document.querySelector('.close');
-
-// Déclenchement
-closeBtn.addEventListener("click", closeModal);
 
 // fonction qui modifie l'affichage (css)
-// close modal
+// CLOSE MODAL FORM
 function closeModal() {
-  modalBackground.style.display = "none";
+  modalbg.style.display = "none";
 }
+
+closeBtn[0].addEventListener("click", closeModal);
+
+// DISPLAY NAV RESPONSIVE
+// EDIT NAV
+function editNav() {
+  var x = document.getElementById('myTopnav');
+  if(x.className === 'topnav') {
+    x.className += 'responsive';
+  }
+  else{
+    x.className ='topnav';
+  }
+}
+
+
 
 
 
