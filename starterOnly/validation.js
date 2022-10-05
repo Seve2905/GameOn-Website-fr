@@ -106,6 +106,7 @@ formFieldsValidation(quantity, checkTournamentsQuantity, 'focusout');
 formFieldsValidation(allLocations, checkLocations, 'change');
 formFieldsValidation(checkbox1, checkCheckBox, 'change');
 
+// VALIDATION DES CHAMPS D ENTREES DU FORMULAIRE
 // FOR ALL FIELDS VALIDATION
 function forAllFieldsValidation() {
     checkFirstName()
@@ -117,6 +118,7 @@ function forAllFieldsValidation() {
     checkCheckBox()
 }
 
+// FONCTION PERMETTANT LA VALIDATION SI CHAQUE CHAMP EST EXACT ALORS OK
 function formValidation() {
     if (checkFirstName() === true &&
         checkLastName() === true &&
