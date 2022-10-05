@@ -130,6 +130,7 @@ function formValidation() {
     return false;
 }
 
+// ACTION QUI DECLENCHE LA VALIDATION DES CHAMPS POUR ENVOI
 // SEND FORM
 form.addEventListener('submit', function (e) {
     e.preventDefault();

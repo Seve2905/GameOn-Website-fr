@@ -140,7 +140,7 @@ main {
   margin: 5% auto;
   width: 100%;
   max-width: 500px;
-  animation-name: madalopen;
+  animation-name: modalopen;
   animation-duration: var(--modal-duration);
   background: #232323;
   border-radius: 10px;
@@ -424,7 +424,7 @@ input[data-error]::after {
 }
 
 .hero-headline {
-  font-size: 4em;
+  font-size: 3em;
   font-weight: normal;
   white-space: nowrap;
   width: 100%;
@@ -573,15 +573,21 @@ footer {
 
 /* MEDIA QUERIES */
 @media screen and (max-width: 540px) {
-  .topnav a {
-    display: none;
+  .main-navbar{
+    display: flex;
+    flex-direction: column-reverse;
+    float: none;
   }
-
+  .topnav a {
+    display: flex;
+    
+  }
   .topnav a.icon {
     float: right;
     display: block;
     margin-top: -15px;
   }
+  
 } 
 
 @media screen and (max-width: 768px) {

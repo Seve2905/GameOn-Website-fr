@@ -4,6 +4,7 @@ const closeModalSubmit = document.getElementsByClassName('close-modal-submit');
 const closeBtnConfirmation = document.getElementById('close-btn-confirmation');
 
 
+// DECLENCHEMENT DU MESSAGE DE CONFIRMATION UNE FOIS  LE FORMULAIRE VALIDE ET ENVOYER
 // SUBMITTED CONFIRMATION
 // DISPLAY MODAL SUBMIT
 function displayModalSubmit() {
@@ -11,6 +12,7 @@ function displayModalSubmit() {
     modalSubmit[0].style.display ='block';
 }
 
+// FONCTION QUI MODIFIE DU CSS DES L ENVOI
 // CLOSE SUBMIT
 function closeSubmit() {
     modalSubmit[0].style.display = 'none';
@@ -21,6 +23,7 @@ function closeSubmit() {
     quantity.style.border = 'none';
 }
 
+// ACTION QUI DECLENCHE LA FERMETURE DU MESSAGE
 // EVENT CLOSE MODAL SUBMIT
 closeModalSubmit[0].addEventListener('click', closeSubmit);
 closeBtnConfirmation.addEventListener('click',closeSubmit);
