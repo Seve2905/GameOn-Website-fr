@@ -573,11 +573,6 @@ footer {
 
 /* MEDIA QUERIES */
 @media screen and (max-width: 540px) {
-  .main-navbar{
-    display: flex;
-    flex-direction: column-reverse;
-    float: none;
-  }
   .topnav a {
     display: flex;
     
